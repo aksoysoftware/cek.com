@@ -1,0 +1,124 @@
+{
+  "site": {
+    "name": "ÇEK",
+    "fullName": "Çözüm Elektrik Klima San. Ltd. Şti.",
+    "tagline": "Your Solution Partner"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "references": "References",
+    "certificates": "Certificates",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badge": "Serving since 1990",
+    "title": "HVAC and Automation",
+    "titleHighlight": "Solution Partner",
+    "description": "With over 35 years of experience, we provide professional solutions in heating, cooling, air conditioning, ventilation and automation.",
+    "cta1": "Contact Us",
+    "cta2": "Our References"
+  },
+  "stats": {
+    "years": "Years Experience",
+    "projects": "Completed Projects",
+    "clients": "Happy Clients",
+    "team": "Expert Staff"
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "We provide comprehensive HVAC and automation solutions with our professional team.",
+    "hvac": {
+      "title": "HVAC & Cooling",
+      "description": "Industrial and commercial HVAC system sales, installation and maintenance services."
+    },
+    "ventilation": {
+      "title": "Ventilation",
+      "description": "Mechanical ventilation system design, implementation and maintenance solutions."
+    },
+    "automation": {
+      "title": "Automation",
+      "description": "Building automation systems and automatic control technology installation."
+    },
+    "service": {
+      "title": "Service & Maintenance",
+      "description": "24/7 technical support, periodic maintenance and troubleshooting services."
+    }
+  },
+  "whyUs": {
+    "title": "Why Choose Us?",
+    "subtitle": "With over 35 years of experience and quality standards, we are a trusted brand in the industry.",
+    "items": {
+      "experience": { "title": "35+ Years Experience", "text": "In the industry since 1990" },
+      "quality": { "title": "Quality Guarantee", "text": "ISO standard services" },
+      "team": { "title": "Expert Team", "text": "Experienced engineering staff" },
+      "support": { "title": "24/7 Support", "text": "Uninterrupted technical service" },
+      "technology": { "title": "Advanced Technology", "text": "Up-to-date equipment and methods" },
+      "satisfaction": { "title": "Customer Satisfaction", "text": "Satisfaction in every project" },
+      "price": { "title": "Competitive Pricing", "text": "Competitive pricing policy" },
+      "trust": { "title": "Reliability", "text": "On-time and quality delivery" }
+    }
+  },
+  "cta": {
+    "title": "Your Solution Partner",
+    "description": "Contact us for your HVAC and automation needs, let's find the best solution together.",
+    "button": "Contact Us Now",
+    "phone": "Call Us"
+  },
+  "about": {
+    "pageTitle": "About Us",
+    "pageSubtitle": "Your trusted solution partner since 1990",
+    "history": "Our History",
+    "mission": "Our Mission",
+    "vision": "Our Vision",
+    "quality": "Quality Policy",
+    "whyPreferred": "Why Are We Preferred?"
+  },
+  "contact": {
+    "pageTitle": "Contact",
+    "pageSubtitle": "Contact us for your projects, let us offer you the best solution.",
+    "formTitle": "Write to Us",
+    "name": "Full Name",
+    "email": "Email",
+    "phone": "Phone",
+    "subject": "Subject",
+    "message": "Your Message",
+    "send": "Send Message",
+    "sending": "Sending...",
+    "success": "Your message has been sent successfully!",
+    "error": "An error occurred, please try again.",
+    "address": "Address",
+    "phoneLabel": "Phone",
+    "fax": "Fax",
+    "emailLabel": "Email"
+  },
+  "references": {
+    "pageTitle": "Our References",
+    "pageSubtitle": "Our successfully completed and ongoing projects.",
+    "all": "All",
+    "automation": "Automation",
+    "sales": "Sales & Installation",
+    "service": "Service & Maintenance",
+    "completed": "Completed",
+    "ongoing": "Ongoing",
+    "details": "Details"
+  },
+  "certificates": {
+    "pageTitle": "Our Certificates",
+    "pageSubtitle": "Certificates that document our quality and reliability.",
+    "download": "Download",
+    "validUntil": "Valid Until"
+  },
+  "footer": {
+    "description": "Your trusted business partner providing professional solutions in heating, cooling, air conditioning, ventilation and automation since 1990.",
+    "quickLinks": "Quick Links",
+    "services": "Services",
+    "contactInfo": "Contact",
+    "rights": "All rights reserved."
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "text": "The page you are looking for does not exist or may have been moved.",
+    "back": "Back to Home"
+  }
+}

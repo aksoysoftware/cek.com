@@ -1,0 +1,115 @@
+/* Ambient Background Enhancements */
+.ambient-bg-wrapper {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -2;
+  overflow: hidden;
+}
+
+.ambient-blob {
+  position: absolute;
+  filter: blur(80px);
+  opacity: 0.4;
+  border-radius: 50%;
+  animation: float-blob 20s infinite ease-in-out alternate;
+}
+
+[data-theme="light"] .ambient-blob {
+  opacity: 0.15;
+}
+
+.ambient-blob-1 {
+  width: 40vw;
+  height: 40vw;
+  top: -10%;
+  left: -10%;
+  background: radial-gradient(circle, var(--color-primary-glow) 0%, transparent 70%);
+  animation-delay: 0s;
+}
+
+.ambient-blob-2 {
+  width: 50vw;
+  height: 50vw;
+  bottom: -20%;
+  right: -10%;
+  background: radial-gradient(circle, var(--color-secondary-glow) 0%, transparent 70%);
+  animation-delay: -5s;
+  animation-duration: 25s;
+}
+
+.ambient-blob-3 {
+  width: 30vw;
+  height: 30vw;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, var(--color-accent-glow) 0%, transparent 70%);
+  animation-delay: -10s;
+  animation-duration: 18s;
+}
+
+@keyframes float-blob {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(5%, 10%) scale(1.1);
+  }
+  100% {
+    transform: translate(-5%, -5%) scale(0.95);
+  }
+}
+
+/* Enhancing Services and Stats Cards with Gradient Glow Borders */
+.service-card, .stat-card {
+  position: relative;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary), transparent, transparent);
+  z-index: -1;
+  border-radius: calc(var(--radius-lg) + 1px);
+  opacity: 0;
+  transition: opacity var(--transition-base), transform var(--transition-base);
+}
+
+.service-card:hover::before {
+  opacity: 0.5;
+  transform: scale(1.02);
+}
+
+[data-theme="light"] .service-card:hover::before {
+  opacity: 0.3;
+}
+
+/* Gradient Text for Main Titles */
+.gradient-text {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+}
+
+/* Better glowing section divider */
+.section-divider {
+  position: relative;
+  overflow: visible;
+}
+
+.section-divider::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background: var(--color-primary);
+  border-radius: 50%;
+  box-shadow: 0 0 15px 5px var(--color-primary-glow);
+}

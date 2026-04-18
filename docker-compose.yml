@@ -1,0 +1,55 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: cek_postgres
+    restart: always
+    environment:
+      POSTGRES_DB: cek_db
+      POSTGRES_USER: cek_admin
+      POSTGRES_PASSWORD: cek_secret_2024
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - cek_network
+
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: cek_web
+    restart: always
+    ports:
+      - "3000:3000"
+    environment:
+      - DATABASE_URL=postgresql://cek_admin:cek_secret_2024@db:5432/cek_db?schema=public
+      - NEXTAUTH_URL=${NEXTAUTH_URL:-http://localhost:3000}
+      - NEXTAUTH_SECRET=${NEXTAUTH_SECRET:-cek_super_secret_jwt_key_2024}
+    depends_on:
+      - db
+    networks:
+      - cek_network
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: cek_pgadmin
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@cek.com.tr
+      PGADMIN_DEFAULT_PASSWORD: admin_2024
+    ports:
+      - "5050:80"
+    depends_on:
+      - db
+    networks:
+      - cek_network
+
+volumes:
+  postgres_data:
+
+networks:
+  cek_network:
+    driver: bridge

@@ -1,0 +1,124 @@
+{
+  "site": {
+    "name": "ÇEK",
+    "fullName": "Çözüm Elektrik Klima San. Ltd. Şti.",
+    "tagline": "Çözüm Ortağınız"
+  },
+  "nav": {
+    "home": "Ana Sayfa",
+    "about": "Kurumsal",
+    "references": "Referanslar",
+    "certificates": "Sertifikalar",
+    "contact": "İletişim"
+  },
+  "hero": {
+    "badge": "1990'dan beri hizmetinizdeyiz",
+    "title": "İklimlendirme ve Otomasyon",
+    "titleHighlight": "Çözüm Ortağınız",
+    "description": "35 yılı aşkın deneyimimizle ısıtma, soğutma, klima, havalandırma ve otomasyon alanlarında profesyonel çözümler sunuyoruz.",
+    "cta1": "Bize Ulaşın",
+    "cta2": "Referanslarımız"
+  },
+  "stats": {
+    "years": "Yıl Deneyim",
+    "projects": "Tamamlanan Proje",
+    "clients": "Mutlu Müşteri",
+    "team": "Uzman Kadro"
+  },
+  "services": {
+    "title": "Hizmetlerimiz",
+    "subtitle": "Profesyonel ekibimizle kapsamlı iklimlendirme ve otomasyon çözümleri sunuyoruz.",
+    "hvac": {
+      "title": "Klima & Soğutma",
+      "description": "Endüstriyel ve ticari klima sistemlerinin satış, montaj ve bakım hizmetleri."
+    },
+    "ventilation": {
+      "title": "Havalandırma",
+      "description": "Mekanik havalandırma sistemleri tasarım, uygulama ve bakım çözümleri."
+    },
+    "automation": {
+      "title": "Otomasyon",
+      "description": "Bina otomasyon sistemleri ve otomatik kontrol teknolojileri kurulumu."
+    },
+    "service": {
+      "title": "Servis & Bakım",
+      "description": "7/24 teknik servis desteği, periyodik bakım ve arıza giderme hizmetleri."
+    }
+  },
+  "whyUs": {
+    "title": "Neden Biz?",
+    "subtitle": "35 yılı aşkın tecrübemiz ve kalite anlayışımızla sektörde güvenilen bir markayız.",
+    "items": {
+      "experience": { "title": "35+ Yıl Deneyim", "text": "1990'dan beri sektörde" },
+      "quality": { "title": "Kalite Garantisi", "text": "ISO standartlarında hizmet" },
+      "team": { "title": "Uzman Ekip", "text": "Deneyimli mühendis kadrosu" },
+      "support": { "title": "7/24 Destek", "text": "Kesintisiz teknik servis" },
+      "technology": { "title": "İleri Teknoloji", "text": "Güncel ekipman ve yöntemler" },
+      "satisfaction": { "title": "Müşteri Memnuniyeti", "text": "Her projede memnuniyet" },
+      "price": { "title": "Uygun Fiyat", "text": "Rekabetçi fiyat politikası" },
+      "trust": { "title": "Güvenilirlik", "text": "Zamanında ve kaliteli teslimat" }
+    }
+  },
+  "cta": {
+    "title": "Projeniz İçin Çözüm Ortağınız",
+    "description": "İklimlendirme ve otomasyon ihtiyaçlarınız için bize ulaşın, en uygun çözümü birlikte bulalım.",
+    "button": "Hemen İletişime Geçin",
+    "phone": "Bizi Arayın"
+  },
+  "about": {
+    "pageTitle": "Kurumsal",
+    "pageSubtitle": "1990'dan bu yana güvenilir çözüm ortağınız",
+    "history": "Tarihçemiz",
+    "mission": "Misyonumuz",
+    "vision": "Vizyonumuz",
+    "quality": "Kalite Politikamız",
+    "whyPreferred": "Neden Tercih Ediliyoruz?"
+  },
+  "contact": {
+    "pageTitle": "İletişim",
+    "pageSubtitle": "Projeleriniz için bize ulaşın, size en uygun çözümü sunalım.",
+    "formTitle": "Bize Yazın",
+    "name": "Ad Soyad",
+    "email": "E-posta",
+    "phone": "Telefon",
+    "subject": "Konu",
+    "message": "Mesajınız",
+    "send": "Mesaj Gönder",
+    "sending": "Gönderiliyor...",
+    "success": "Mesajınız başarıyla gönderildi!",
+    "error": "Bir hata oluştu, lütfen tekrar deneyin.",
+    "address": "Adres",
+    "phoneLabel": "Telefon",
+    "fax": "Faks",
+    "emailLabel": "E-posta"
+  },
+  "references": {
+    "pageTitle": "Referanslarımız",
+    "pageSubtitle": "Başarıyla tamamladığımız ve devam eden projelerimiz.",
+    "all": "Tümü",
+    "automation": "Otomasyon",
+    "sales": "Satış & Montaj",
+    "service": "Servis & Bakım",
+    "completed": "Tamamlandı",
+    "ongoing": "Devam Ediyor",
+    "details": "Detaylar"
+  },
+  "certificates": {
+    "pageTitle": "Sertifikalarımız",
+    "pageSubtitle": "Kalite ve güvenilirliğimizi belgeleyen sertifikalarımız.",
+    "download": "İndir",
+    "validUntil": "Geçerlilik"
+  },
+  "footer": {
+    "description": "1990'dan bu yana ısıtma, soğutma, klima, havalandırma ve otomasyon alanlarında profesyonel çözümler sunan güvenilir iş ortağınız.",
+    "quickLinks": "Hızlı Linkler",
+    "services": "Hizmetler",
+    "contactInfo": "İletişim",
+    "rights": "Tüm hakları saklıdır."
+  },
+  "notFound": {
+    "title": "Sayfa Bulunamadı",
+    "text": "Aradığınız sayfa mevcut değil veya taşınmış olabilir.",
+    "back": "Ana Sayfaya Dön"
+  }
+}
