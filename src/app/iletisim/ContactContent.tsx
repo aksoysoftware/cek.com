@@ -20,7 +20,6 @@ export default function ContactContent() {
       if (res.ok) {
         setStatus('success');
         setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
-        setTimeout(() => setStatus('idle'), 5000);
       } else { setStatus('error'); setTimeout(() => setStatus('idle'), 5000); }
     } catch { setStatus('error'); setTimeout(() => setStatus('idle'), 5000); }
   };
@@ -40,40 +39,54 @@ export default function ContactContent() {
           <div className="contact-grid">
             <ScrollReveal>
               <form className="contact-form" onSubmit={handleSubmit} id="contact-form">
-                <h3>Bize Yazın</h3>
-                <div className="form-row">
-                  <div className="form-group">
-                    <label className="label" htmlFor="contact-name">Ad Soyad</label>
-                    <input className="input" type="text" id="contact-name" placeholder="Adınız Soyadınız" required value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} />
+                {status === 'success' ? (
+                  <div style={{ textAlign: 'center', padding: 'var(--space-8) 0', animation: 'fadeInUp 0.5s ease-out' }}>
+                    <div style={{ width: '80px', height: '80px', background: 'rgba(52, 211, 153, 0.1)', color: 'var(--color-success)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto var(--space-6)' }}>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    </div>
+                    <h3 style={{ marginBottom: 'var(--space-2)', fontSize: 'var(--text-2xl)', color: 'var(--color-text)' }}>Mesajınız İletildi!</h3>
+                    <p style={{ color: 'var(--color-text-muted)', fontSize: 'var(--text-base)', lineHeight: 1.6, maxWidth: '400px', margin: '0 auto' }}>
+                      İlginiz için teşekkür ederiz. Mesajınız ekibimize ulaştı, iletişim bilgileriniz üzerinden en kısa sürede size geri dönüş yapılacaktır.
+                    </p>
+                    <button type="button" className="btn btn-primary" onClick={() => setStatus('idle')} style={{ marginTop: 'var(--space-8)' }}>
+                      Farklı Bir Mesaj Gönder
+                    </button>
                   </div>
-                  <div className="form-group">
-                    <label className="label" htmlFor="contact-email">E-posta</label>
-                    <input className="input" type="email" id="contact-email" placeholder="ornek@email.com" required value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} />
-                  </div>
-                </div>
-                <div className="form-row">
-                  <div className="form-group">
-                    <label className="label" htmlFor="contact-phone">Telefon</label>
-                    <input className="input" type="tel" id="contact-phone" placeholder="+90 5XX XXX XX XX" value={formData.phone} onChange={(e) => setFormData({ ...formData, phone: e.target.value })} />
-                  </div>
-                  <div className="form-group">
-                    <label className="label" htmlFor="contact-subject">Konu</label>
-                    <input className="input" type="text" id="contact-subject" placeholder="Konuyu belirtin" required value={formData.subject} onChange={(e) => setFormData({ ...formData, subject: e.target.value })} />
-                  </div>
-                </div>
-                <div className="form-group">
-                  <label className="label" htmlFor="contact-message">Mesajınız</label>
-                  <textarea className="input" id="contact-message" placeholder="Mesajınızı yazın..." required value={formData.message} onChange={(e) => setFormData({ ...formData, message: e.target.value })} />
-                </div>
-                <button type="submit" className="btn btn-primary btn-lg" style={{ width: '100%' }} disabled={status === 'sending'} id="contact-submit">
-                  <IconMail size={18} />
-                  {status === 'sending' ? 'Gönderiliyor...' : 'Mesaj Gönder'}
-                </button>
-                {status === 'success' && (
-                  <div className="toast toast-success" style={{ marginTop: 'var(--space-4)' }}>Mesajınız başarıyla gönderildi!</div>
-                )}
-                {status === 'error' && (
-                  <div className="toast toast-error" style={{ marginTop: 'var(--space-4)' }}>Bir hata oluştu, lütfen tekrar deneyin.</div>
+                ) : (
+                  <>
+                    <h3>Bize Yazın</h3>
+                    <div className="form-row">
+                      <div className="form-group">
+                        <label className="label" htmlFor="contact-name">Ad Soyad</label>
+                        <input className="input" type="text" id="contact-name" placeholder="Adınız Soyadınız" required value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} />
+                      </div>
+                      <div className="form-group">
+                        <label className="label" htmlFor="contact-email">E-posta</label>
+                        <input className="input" type="email" id="contact-email" placeholder="ornek@email.com" required value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} />
+                      </div>
+                    </div>
+                    <div className="form-row">
+                      <div className="form-group">
+                        <label className="label" htmlFor="contact-phone">Telefon</label>
+                        <input className="input" type="tel" id="contact-phone" placeholder="+90 5XX XXX XX XX" value={formData.phone} onChange={(e) => setFormData({ ...formData, phone: e.target.value })} />
+                      </div>
+                      <div className="form-group">
+                        <label className="label" htmlFor="contact-subject">Konu</label>
+                        <input className="input" type="text" id="contact-subject" placeholder="Konuyu belirtin" required value={formData.subject} onChange={(e) => setFormData({ ...formData, subject: e.target.value })} />
+                      </div>
+                    </div>
+                    <div className="form-group">
+                      <label className="label" htmlFor="contact-message">Mesajınız</label>
+                      <textarea className="input" id="contact-message" placeholder="Mesajınızı yazın..." required value={formData.message} onChange={(e) => setFormData({ ...formData, message: e.target.value })} />
+                    </div>
+                    <button type="submit" className="btn btn-primary btn-lg" style={{ width: '100%' }} disabled={status === 'sending'} id="contact-submit">
+                      <IconMail size={18} />
+                      {status === 'sending' ? 'Gönderiliyor...' : 'Mesaj Gönder'}
+                    </button>
+                    {status === 'error' && (
+                      <div className="toast toast-error" style={{ marginTop: 'var(--space-4)' }}>Bir hata oluştu, lütfen tekrar deneyin.</div>
+                    )}
+                  </>
                 )}
               </form>
             </ScrollReveal>
