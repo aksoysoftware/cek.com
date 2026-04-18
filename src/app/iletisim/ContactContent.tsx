@@ -110,8 +110,8 @@ export default function ContactContent() {
                 </div>
                 <div className="contact-map" id="contact-map">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3060.5!2d32.85!3d39.9!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMznCsDU0JzAwLjAiTiAzMsKwNTEnMDAuMCJF!5e0!3m2!1str!2str!4v1"
-                    loading="lazy" title="CEK Konum"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3061.3898281849315!2d32.825962476584216!3d39.887903571529556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d345f37753e385%3A0x54ac5bab8a189f69!2s%C3%87%C3%B6z%C3%BCm%20Elektrik%20Klima%20San.%20ve%20Tic.%20Ltd.%20%C5%9Eti.!5e0!3m2!1str!2str!4v1776516822681!5m2!1str!2str"
+                    loading="lazy" title="CEK Konum" style={{ width: '100%', height: '100%', border: 0 }} allowFullScreen={true}
                   ></iframe>
                 </div>
               </div>
