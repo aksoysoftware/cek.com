@@ -20,9 +20,9 @@ export const metadata: Metadata = {
     siteName: 'ÇEK',
     images: [
       {
-        url: '/images/cozum-logo.svg',
+        url: '/images/og-image.png',
         width: 1200,
-        height: 630,
+        height: 547,
         alt: 'Çözüm Elektrik Klima Logo',
       },
     ],
