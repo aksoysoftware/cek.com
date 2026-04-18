@@ -186,6 +186,7 @@ export default function AdminReferences() {
         {loading ? (
           <div style={{ padding: '20px', textAlign: 'center' }}>Yükleniyor...</div>
         ) : (
+        <div className="admin-table-responsive">
           <table className="admin-table">
             <thead>
               <tr>
@@ -230,6 +231,7 @@ export default function AdminReferences() {
               )}
             </tbody>
           </table>
+        </div>
         )}
       </div>
 

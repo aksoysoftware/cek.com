@@ -79,59 +79,61 @@ export default function AdminMessages() {
           <h3 style={{ fontSize: 'var(--text-lg)' }}>İletişim Mesajları ({messages.length})</h3>
         </div>
 
-        <table className="admin-table">
-          <thead>
-            <tr>
-              <th></th>
-              <th>Gönderen</th>
-              <th>Konu</th>
-              <th>Tarih</th>
-              <th>İşlemler</th>
-            </tr>
-          </thead>
-          <tbody>
-            {loading ? (
-              <tr><td colSpan={5} style={{ textAlign: 'center', padding: 'var(--space-4)' }}>Yükleniyor...</td></tr>
-            ) : messages.length === 0 ? (
-              <tr><td colSpan={5} style={{ textAlign: 'center', padding: 'var(--space-4)' }}>Hiç mesaj yok.</td></tr>
-            ) : messages.map((msg) => (
-              <tr key={msg.id} style={{ fontWeight: msg.isRead ? 400 : 600 }}>
-                <td>
-                  <span style={{ color: msg.isRead ? 'var(--color-text-muted)' : 'var(--color-primary)', display: 'flex' }}>
-                    <IconMail size={16} />
-                  </span>
-                </td>
-                <td style={{ color: 'var(--color-text-primary)' }}>
-                  {msg.name}
-                  <br />
-                  <span style={{ fontSize: 'var(--text-xs)', color: 'var(--color-text-muted)', fontWeight: 400 }}>{msg.email}</span>
-                </td>
-                <td>{msg.subject}</td>
-                <td style={{ fontWeight: 400 }}>{new Date(msg.createdAt).toLocaleDateString('tr-TR')}</td>
-                <td>
-                  <div style={{ display: 'flex', gap: 'var(--space-2)' }}>
-                    <button className="btn btn-secondary btn-sm" onClick={() => { setSelectedMessage(msg); if (!msg.isRead) toggleRead(msg.id, false); }}><IconEye size={14} /></button>
-                    <button
-                      className="btn btn-sm"
-                      style={{
-                        background: msg.isRead ? 'var(--color-primary-subtle)' : 'rgba(52, 211, 153, 0.08)',
-                        color: msg.isRead ? 'var(--color-primary)' : 'var(--color-success)',
-                        border: '1px solid transparent',
-                      }}
-                      onClick={() => toggleRead(msg.id, msg.isRead)}
-                      title={msg.isRead ? "Okunmadı İşaretle" : "Okundu İşaretle"}
-                    >
-                      <IconCheck size={14} />
-                    </button>
-                    <button className="btn btn-sm" style={{ background: 'rgba(248, 113, 113, 0.08)', color: 'var(--color-error)' }} onClick={() => handleDelete(msg.id)}>
-                      Sil
-                    </button>
-                  </div>
-                </td>
+        <div className="admin-table-responsive">
+          <table className="admin-table">
+            <thead>
+              <tr>
+                <th></th>
+                <th>Gönderen</th>
+                <th>Konu</th>
+                <th>Tarih</th>
+                <th>İşlemler</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {loading ? (
+                <tr><td colSpan={5} style={{ textAlign: 'center', padding: 'var(--space-4)' }}>Yükleniyor...</td></tr>
+              ) : messages.length === 0 ? (
+                <tr><td colSpan={5} style={{ textAlign: 'center', padding: 'var(--space-4)' }}>Hiç mesaj yok.</td></tr>
+              ) : messages.map((msg) => (
+                <tr key={msg.id} style={{ fontWeight: msg.isRead ? 400 : 600 }}>
+                  <td>
+                    <span style={{ color: msg.isRead ? 'var(--color-text-muted)' : 'var(--color-primary)', display: 'flex' }}>
+                      <IconMail size={16} />
+                    </span>
+                  </td>
+                  <td style={{ color: 'var(--color-text-primary)' }}>
+                    {msg.name}
+                    <br />
+                    <span style={{ fontSize: 'var(--text-xs)', color: 'var(--color-text-muted)', fontWeight: 400 }}>{msg.email}</span>
+                  </td>
+                  <td>{msg.subject}</td>
+                  <td style={{ fontWeight: 400 }}>{new Date(msg.createdAt).toLocaleDateString('tr-TR')}</td>
+                  <td>
+                    <div style={{ display: 'flex', gap: 'var(--space-2)' }}>
+                      <button className="btn btn-secondary btn-sm" onClick={() => { setSelectedMessage(msg); if (!msg.isRead) toggleRead(msg.id, false); }}><IconEye size={14} /></button>
+                      <button
+                        className="btn btn-sm"
+                        style={{
+                          background: msg.isRead ? 'var(--color-primary-subtle)' : 'rgba(52, 211, 153, 0.08)',
+                          color: msg.isRead ? 'var(--color-primary)' : 'var(--color-success)',
+                          border: '1px solid transparent',
+                        }}
+                        onClick={() => toggleRead(msg.id, msg.isRead)}
+                        title={msg.isRead ? "Okunmadı İşaretle" : "Okundu İşaretle"}
+                      >
+                        <IconCheck size={14} />
+                      </button>
+                      <button className="btn btn-sm" style={{ background: 'rgba(248, 113, 113, 0.08)', color: 'var(--color-error)' }} onClick={() => handleDelete(msg.id)}>
+                        Sil
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
 
       {selectedMessage && (
